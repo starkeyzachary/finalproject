@@ -128,3 +128,6 @@ def post_search(request):
 
 def about(request):
     return render(request, 'blog/about.html')
+
+def contact(request):
+    return render(request, 'blog/contact.html')
