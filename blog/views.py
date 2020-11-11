@@ -124,3 +124,7 @@ def post_search(request):
                   {'form': form,
                    'query': query,
                    'results': results})
+
+
+def about(request):
+    return render(request, 'blog/about.html')
