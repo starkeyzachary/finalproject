@@ -35,9 +35,9 @@
     <link rel="manifest" href="{% static 'site.webmanifest' %}"> 
 
 </head>
-
+{% include "blog/navigation.html" %}
 <body class="d-flex flex-column">
-    {% include "blog/navigation.html" %}
+ 
     <!-- Page Content -->
     <div id="page-content">
         <div class="container">
@@ -52,7 +52,7 @@
                         {% if total_items > 0 %}
                             <p>
                                 <span class="badge badge-secondary">Your cart:</span>
-                                <a href="{% url "cart:cart_detail" %}">
+                                <a href="{% url 'cart:cart_detail' %}">
                                     {{ total_items }} item{{ total_items|pluralize }},
                                     ${{ cart.get_total_price|intcomma }}
                                 </a>                    
