@@ -1,12 +1,13 @@
 <html>
 <body>
-  <h1>Buffteks Shop</h1>
+  <h1>My Shop</h1>
   <p>
     Invoice no. {{ order.id }}</br>
     <span class="secondary">
       {{ order.created|date:"M d, Y" }}
     </span>
   </p>
+
   <h3>Bill to</h3>
   <p>
     {{ order.first_name }} {{ order.last_name }}<br>
@@ -14,6 +15,7 @@
     {{ order.address }}<br>
     {{ order.postal_code }}, {{ order.city }}
   </p>
+
   <h3>Items bought</h3>
   <table>
     <thead>
@@ -39,7 +41,7 @@
       </tr>
     </tbody>
   </table>
-    
+
   <span class="{% if order.paid %}paid{% else %}pending{% endif %}">
     {% if order.paid %}Paid{% else %}Pending payment{% endif %}
   </span>

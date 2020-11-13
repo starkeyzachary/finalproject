@@ -1,7 +1,9 @@
 {% extends "admin/base_site.html" %}
+
 {% block title %}
   Order {{ order.id }} {{ block.super }}
 {% endblock %}
+
 {% block breadcrumbs %}
   <div class="breadcrumbs">
     <a href="{% url "admin:index" %}">Home</a> &rsaquo;
@@ -11,6 +13,7 @@
     &rsaquo; Detail
   </div>
 {% endblock %}
+
 {% block content %}
 <h1>Order {{ order.id }}</h1>
 <ul class="object-tools">
@@ -33,10 +36,7 @@
   </tr>
   <tr>
     <th>Address</th>
-  <td>
-    {{ order.address }}, 
-    {{ order.postal_code }} {{ order.city }}
-  </td> 
+    <td>{{ order.address }}, {{ order.postal_code }} {{ order.city }}</td>
   </tr>
   <tr>
     <th>Total amount</th>
@@ -47,6 +47,7 @@
     <td>{% if order.paid %}Paid{% else %}Pending payment{% endif %}</td>
   </tr>
 </table>
+
 <div class="module">
   <h2>Items bought</h2>
   <table style="width:100%">
