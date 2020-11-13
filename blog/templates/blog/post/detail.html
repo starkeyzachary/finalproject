@@ -40,7 +40,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <!-- <div class="post-heading"> -->
+          <div class="post-heading">
             <h1>{{ post.title }}</h1>
             <span class="meta">Posted by
               <a href="#">{{ post.author }}</a>
@@ -52,62 +52,62 @@
   </header>
 
   <!-- Post Content -->
-<div class="col-lg-8"></div>
+  <div class="col-lg-8"></div>
   <!-- <article> -->
     <!-- <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto"> -->
-  {% comment %} {{ post.body|linebreaks }} {% endcomment %}
-  {{ post.body|markdown }}    
-  <hr>
+    {% comment %} {{ post.body|linebreaks }} {% endcomment %}
+    {{ post.body|markdown }}    
+    <hr>
 
-  <h2>Similar posts</h2>
-  {% for post in similar_posts %}
-  <p>
-      <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-  </p>
-  {% empty %}
-  There are no similar posts yet.
-  {% endfor %}
+    <h2>Similar posts</h2>
+    {% for post in similar_posts %}
+    <p>
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    </p>
+    {% empty %}
+    There are no similar posts yet.
+    {% endfor %}
 
-  {% with comments.count as total_comments %}
-      <h2>
-          {{ total_comments }} Comment{{ total_comments|pluralize }}
-      </h2>
-  {% endwith %}    
-  <!-- Single Comment -->
-  {% for comment in comments %}
-      <div class="media mb-4">
-          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">    
-          <div class="media-body">
-              <h5 class="mt-0">Comment {{ forloop.counter }} by {{ comment.name }}</h5>
-              {{ comment.created }}            
-              {{ comment.body|linebreaks }}
-          </div>        
-      </div>
-      {% empty %}
-      <p>There are no comments yet.</p>
-  {% endfor %}
+    {% with comments.count as total_comments %}
+        <h2>
+            {{ total_comments }} Comment{{ total_comments|pluralize }}
+        </h2>
+    {% endwith %}    
+    <!-- Single Comment -->
+    {% for comment in comments %}
+        <div class="media mb-4">
+            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">    
+            <div class="media-body">
+                <h5 class="mt-0">Comment {{ forloop.counter }} by {{ comment.name }}</h5>
+                {{ comment.created }}            
+                {{ comment.body|linebreaks }}
+            </div>        
+        </div>
+        {% empty %}
+        <p>There are no comments yet.</p>
+    {% endfor %}
 
-  <!-- Comments Form -->
-  <div class="card my-4">
-      <div class="card-body">    
-      {% if new_comment %}
-          <h5 class="card-header">Your comment has been added.</h5>        
-      {% else %}
-          <h5 class="card-header">Leave a Comment:</h5>
-          <form class="form-group" method="post">
-              {{ comment_form | crispy }}
-              {% csrf_token %}
-              <button type="submit" class="btn btn-primary">Add Comment</button>
-              {% comment %} <p><input type="submit" value="Add comment"></p> {% endcomment %}
-              
-          </form>
-      {% endif %}  
-      </div>        
-  </div>    
-</div>
-{% endblock %}
+    <!-- Comments Form -->
+    <div class="card my-4">
+        <div class="card-body">    
+        {% if new_comment %}
+            <h5 class="card-header">Your comment has been added.</h5>        
+        {% else %}
+            <h5 class="card-header">Leave a Comment:</h5>
+            <form class="form-group" method="post">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Add Comment</button>
+                {% comment %} <p><input type="submit" value="Add comment"></p> {% endcomment %}
+                
+            </form>
+        {% endif %}  
+        </div>        
+    </div>    
+  </div>
+  {% endblock %}
           <!-- <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
 
           <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
