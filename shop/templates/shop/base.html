@@ -36,13 +36,17 @@
 
 </head>
 {% include "blog/navigation.html" %}
-<body class="d-flex flex-column">
+<body>
+
+    </div class="d-flex flex-column">
  
     <!-- Page Content -->
-    <div id="page-content">
+    <!-- <div id="page-content"> -->
         <div class="container">
+            <div class="row">
             {% block content %}
             {% endblock content %}
+            </div>
         </div>
         <!-- /.container -->
         <div class="container">
