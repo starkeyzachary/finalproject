@@ -408,3 +408,8 @@ footer .copyright {
   font-size: 16px;
   padding: 25px 35px;
 }
+
+.btn-sm {
+  font-size: 16px;
+  padding: 12px 17px;
+}
