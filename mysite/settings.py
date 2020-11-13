@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['eattraveldogs.com', 'www.eattraveldogs.com', 'localhost', '127.0.0.1']
 
@@ -37,10 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.humanize',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'cart.apps.CartConfig',
+    'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',    
+    'shop.apps.ShopConfig',
     'crispy_forms',
     'taggit',
     'django.contrib.sites',
@@ -156,3 +161,16 @@ EMAIL_USE_TLS = True
 
 # Django crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# cart
+CART_SESSION_ID = 'cart'
+
+# braintree
+BRAINTREE_MERCHANT_ID = os.getenv('BRAINTREE_MERCHANT_ID');     # Merchant ID
+BRAINTREE_PUBLIC_KEY = os.getenv('BRAINTREE_PUBLIC_KEY')        # Public Key
+BRAINTREE_PRIVATE_KEY = os.getenv('BRAINTREE_PRIVATE_KEY')      # Private key
+BRAINTREE_CONF = braintree.Configuration(
+    braintree.Environment.Sandbox,
+    BRAINTREE_MERCHANT_ID,
+    BRAINTREE_PUBLIC_KEY,
+    BRAINTREE_PRIVATE_KEY
