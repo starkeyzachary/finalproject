@@ -46,10 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    # 'cart.apps.CartConfig',
-    # 'orders.apps.OrdersConfig',
-    # 'payment.apps.PaymentConfig',    
-    # 'shop.apps.ShopConfig',
+    'cart.apps.CartConfig',
+    'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',    
+    'shop.apps.ShopConfig',
     # 'coupons.apps.CouponsConfig',
     'crispy_forms',
     'taggit',
@@ -85,6 +85,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
             ],
         },
     },
@@ -159,6 +160,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # STATICFILES_DIRS = ()
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # MEDIA/UPLOADS
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
@@ -175,7 +178,7 @@ EMAIL_USE_TLS = True
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # cart
-# CART_SESSION_ID = 'cart'
+CART_SESSION_ID = 'cart'
 
 # braintree
 BRAINTREE_MERCHANT_ID = os.getenv('BRAINTREE_MERCHANT_ID');     # Merchant ID
