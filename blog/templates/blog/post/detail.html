@@ -62,11 +62,9 @@
       <div class="col-md-8">
         <div class="card mb-4">
           <div class="card-body">
-            <h2>
-              <p class="card-title" >
-                {{ post.title }}
-              </p>
-            <h2>
+            <p class="card-title text-muted" >
+              {{ post.title }}
+            </p>
             <p class="card-text">
             {% comment %} {{ post.body|linebreaks }} {% endcomment %}
             {{ post.body|markdown }}    
