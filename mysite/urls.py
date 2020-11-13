@@ -19,9 +19,9 @@ from django.contrib import admin
 from django.urls import include, path
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemaps import PostSitemap
-sitemaps = {
-    'posts': PostSitemap,
-}
+# sitemaps = {
+#     'posts': PostSitemap,
+# }
 
 sitemaps = {
 'posts': PostSitemap,
@@ -29,10 +29,10 @@ sitemaps = {
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cart/', include('cart.urls', namespace='cart')),
-    path('payment/', include('payment.urls', namespace='payment')),
-    path('orders/', include('orders.urls', namespace='orders')),    
-    path('shop/', include('shop.urls', namespace='shop')),
+    # path('cart/', include('cart.urls', namespace='cart')),
+    # path('payment/', include('payment.urls', namespace='payment')),
+    # path('orders/', include('orders.urls', namespace='orders')),    
+    # path('shop/', include('shop.urls', namespace='shop')),
     path('', include('blog.urls', namespace='blog')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
          name='django.contrib.sitemaps.views.sitemap')

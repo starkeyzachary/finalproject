@@ -46,19 +46,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'cart.apps.CartConfig',
-    'orders.apps.OrdersConfig',
-    'payment.apps.PaymentConfig',    
-    'shop.apps.ShopConfig',
-    'coupons.apps.CouponsConfig',
+    # 'cart.apps.CartConfig',
+    # 'orders.apps.OrdersConfig',
+    # 'payment.apps.PaymentConfig',    
+    # 'shop.apps.ShopConfig',
+    # 'coupons.apps.CouponsConfig',
     'crispy_forms',
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.postgres',
-    'rosetta',
-    'parler',
-    'localflavor'
+    # 'rosetta',
+    # 'parler',
+    # 'localflavor'
 ]
 
 MIDDLEWARE = [
@@ -175,7 +175,7 @@ EMAIL_USE_TLS = True
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # cart
-CART_SESSION_ID = 'cart'
+# CART_SESSION_ID = 'cart'
 
 # braintree
 BRAINTREE_MERCHANT_ID = os.getenv('BRAINTREE_MERCHANT_ID');     # Merchant ID
