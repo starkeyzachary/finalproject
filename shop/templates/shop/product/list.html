@@ -68,7 +68,8 @@
                                 <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>                                    
                             </h4>
                             <h5>${{ product.price|intcomma }}</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            <p class="card-text">{{ product.description|truncatewords:10|linebreaks }}</p>
+                            <a href="{{ product.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
