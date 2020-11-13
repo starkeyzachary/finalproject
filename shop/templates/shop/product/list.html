@@ -32,7 +32,7 @@
             <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
                 <img class="d-block img-fluid" 
-                     src=" {% if slides.image %}{{slides.image.url}}{% else %}http://placehold.it/900x350{% endif %}" 
+                     src=" {% if product.image %}{{product.image.url}}{% else %}http://placehold.it/900x350{% endif %}" 
                      alt="First slide">
             </div>
             <div class="carousel-item">
@@ -69,7 +69,6 @@
                             </h4>
                             <h5>${{ product.price|intcomma }}</h5>
                             <p class="card-text">{{ product.description|truncatewords:10|linebreaks }}</p>
-                            <a href="{{ product.get_absolute_url }}" class="btn btn-primary btn-s">Read More &rarr;</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
