@@ -50,11 +50,15 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',    
     'shop.apps.ShopConfig',
+    'coupons.apps.CouponsConfig',
     'crispy_forms',
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.postgres',
+    'rosetta',
+    'parler',
+    'localflavor'
 ]
 
 MIDDLEWARE = [
