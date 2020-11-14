@@ -27,12 +27,12 @@
         <li class="nav-item">
           {% with total_items=cart|length %}
               {% if total_items > 0 %}
-                  <p>
+                  <h8>
                       <span class="badge badge-primary">Your cart:</span>
                       <a href="{% url 'cart:cart_detail' %}">
                           {{ total_items }} item{{ total_items|pluralize }}
                       </a>                    
-                  </p> 
+                    </h8> 
               {% else %}
                   <a> <span class="badge badge-secondary">Your cart is empty.</span></a>
               {% endif %}
