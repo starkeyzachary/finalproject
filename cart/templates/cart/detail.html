@@ -5,7 +5,8 @@
     Your shopping cart
 {% endblock %}
 {% block content %}
-    <h1>Your shopping cart</h1>
+
+    <h1 class="my-4">Your shopping cart</h1>
     <table class="table">
         <thead class="thead-light">
             <tr>
@@ -23,8 +24,7 @@
             <tr scope="row">
                 <td>
                     <a href="{{ product.get_absolute_url }}">
-                        <img src="{% if product.image %}{{ product.image.url }}
-                        {% else %}{% static 'img/no_image.png' %}{% endif %}">
+                        <img src="{% if product.image %}{{ product.image.url }}{% else %}http://placehold.it/700x400{% endif %}">
                     </a>
                 </td>
                 <td>{{ product.name }}</td>
