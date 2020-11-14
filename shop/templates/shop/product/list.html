@@ -8,15 +8,19 @@
 <div class="row">
 
         <div class="col-lg-3">
+            <ul class="list-inline text-center">
                 <h3 class="my-4">Shop Categories
                 </h3> 
+            </ul>
             <!-- <h1 class="my-4">Buffteks Shop</h1> -->
                     
             <div class="list-group">
-                <a href="{% url 'shop:product_list' %}" class="list-group-item">All</a>
-                {% for c in categories %}
-                    <a href="{{ c.get_absolute_url }}" class="list-group-item">{{ c.name }}</a>
-                {% endfor %}
+                <ul class="list-inline text-center">
+                    <a href="{% url 'shop:product_list' %}" class="list-group-item">All</a>
+                    {% for c in categories %}
+                        <a href="{{ c.get_absolute_url }}" class="list-group-item">{{ c.name }}</a>
+                    {% endfor %}
+                </ul>
             </div>
             {% include "blog/footer.html" %}
         </div>
