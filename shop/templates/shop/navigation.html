@@ -25,18 +25,18 @@
           <a class="nav-link" href="/search">Search for Post</a>
         </li>
         <li>
-        {% with total_items=cart|length %}
-            {% if total_items > 0 %}
-                <p>
-                    <span class="badge badge-primary">Your cart:</span>
-                    <a href="{% url 'cart:cart_detail' %}">
-                        {{ total_items }} item{{ total_items|pluralize }}
-                    </a>                    
-                </p> 
-            {% else %}
-                <p> <span class="badge badge-secondary">Your cart is empty.</span></p>
-            {% endif %}
-        {% endwith %}
+          {% with total_items=cart|length %}
+              {% if total_items > 0 %}
+                  <p>
+                      <span class="badge badge-primary">Your cart:</span>
+                      <a href="{% url 'cart:cart_detail' %}">
+                          {{ total_items }} item{{ total_items|pluralize }}
+                      </a>                    
+                  </p> 
+              {% else %}
+                  <p> <span class="badge badge-secondary">Your cart is empty.</span></p>
+              {% endif %}
+          {% endwith %}
         </li>
       </ul>
     </div>
