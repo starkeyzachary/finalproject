@@ -487,3 +487,14 @@ body {
     font-size: 8px;
     padding: 8px 14px;
   } 
+
+  .btn-red {
+    background-color: #a10000;
+    border-color: #a10000;
+  }
+
+  .btn-red:hover, .btn-red:focus, .btn-red:active {
+    color: #fff;
+    background-color: #4b0101 !important;
+    border-color: #4b0101 !important;
+  }
