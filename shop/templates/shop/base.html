@@ -35,9 +35,9 @@
     <link rel="manifest" href="{% static 'site.webmanifest' %}"> 
 
 </head>
-{% include "blog/navigation.html" %}
-<body>
 
+<body>
+    {% include "blog/navigation.html" %}
     <!-- </div class="d-flex flex-column"> -->
  
     <!-- Page Content -->
@@ -69,7 +69,6 @@
             </div>        
         </div>
         <!-- /.container -->        
-    </div>
     {% include "blog/footer.html" %}
 
     <!-- jQuery and JS bundle w/ Popper.js -->
