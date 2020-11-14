@@ -30,8 +30,7 @@
                 <p>
                     <span class="badge badge-primary">Your cart:</span>
                     <a href="{% url 'cart:cart_detail' %}">
-                        {{ total_items }} item{{ total_items|pluralize }},
-                        ${{ cart.get_total_price|intcomma }}
+                        {{ total_items }} item{{ total_items|pluralize }}
                     </a>                    
                 </p> 
             {% else %}
