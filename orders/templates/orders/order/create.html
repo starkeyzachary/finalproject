@@ -9,7 +9,7 @@
 <!-- <div class="container"> -->
 <div class="row">
         <div class="col-4">
-            <h1 class="my-4">Shop Categories
+            <h1 class="my-4">Checkout
             </h1>
             <form method="post" class="order-form">
                 {% comment %} using django crispy forms for this filter
@@ -29,22 +29,24 @@
 
 
     <div class="col-4 my-4">
-        <div class="card h-100">
-            <div class="card-body">
-                <h3>Your order</h3>
-                <ul>
-                    {% for item in cart %}
-                        <li>
-                            {{ item.quantity }}x {{ item.product.name }}
-                            <span>${{ item.total_price|intcomma }}</span>
-                        </li>
-                    {% endfor %}
-                </ul>
+        <div class="row"></div>
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3>Your order</h3>
+                    <ul>
+                        {% for item in cart %}
+                            <li>
+                                {{ item.quantity }}x {{ item.product.name }}
+                                <span>${{ item.total_price|intcomma }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <p>Total: ${{ cart.get_total_price|intcomma }}</p>
+                </div> 
             </div>
-            <div class="card-footer">
-                <p>Total: ${{ cart.get_total_price|intcomma }}</p>
-            </div> 
-        </div> 
+        </div>     
     </div>      
 </div> 
 {% endblock %}
