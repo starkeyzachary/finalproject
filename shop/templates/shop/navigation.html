@@ -24,6 +24,20 @@
         <li class="nav-item">
           <a class="nav-link" href="/search">Search for Post</a>
         </li>
+        <li class="nav-item">
+        {% with total_items=cart|length %}
+            {% if total_items > 0 %}
+                <p>
+                    <span class="badge badge-primary">Your cart:</span>
+                    <a href="{% url 'cart:cart_detail' %}">
+                        {{ total_items }} item{{ total_items|pluralize }},
+                        ${{ cart.get_total_price|intcomma }}
+                    </a>                    
+                </p> 
+            {% else %}
+                <p> <span class="badge badge-secondary">Your cart is empty.</span></p>
+            {% endif %}
+        {% endwith %}
       </ul>
     </div>
   </div>
