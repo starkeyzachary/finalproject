@@ -76,6 +76,7 @@ body {
   background: linear-gradient(to right, #0062E6, #33AEFF);
 } */
 
+
 body {
     padding-top: 56px;
     font-size: 20px;
@@ -163,7 +164,7 @@ body {
   #mainNav {
     position: absolute;
     border-bottom: 1px solid #e9ecef;
-    background-color: white;
+    background-color: grey;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   
