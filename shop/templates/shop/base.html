@@ -56,7 +56,7 @@
                     {% with total_items=cart|length %}
                         {% if total_items > 0 %}
                             <p>
-                                <span class="badge badge-secondary">Your cart:</span>
+                                <span class="badge badge-primary">Your cart:</span>
                                 <a href="{% url 'cart:cart_detail' %}">
                                     {{ total_items }} item{{ total_items|pluralize }},
                                     ${{ cart.get_total_price|intcomma }}
@@ -70,7 +70,7 @@
             </div>        
         </div>
         <!-- /.container -->        
-    {% include "blog/footer.html" %}
+    <!-- {% include "blog/footer.html" %} -->
 
     <!-- jQuery and JS bundle w/ Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
