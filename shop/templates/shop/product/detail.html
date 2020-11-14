@@ -7,11 +7,10 @@
 {% block content %}
 <!-- Page Content -->
 
-
 <div class="container">
     <div class="row">
         <!-- <div class="col-lg-4 col-md-6 mb-4 my-4"> -->
-        <div class="col-lg-3">
+        <div class="col-lg-4">
             <a href="/shop" class="my-4 btn btn-primary">Back to Shopping</a>
             <!-- <h1 class="my-4">Buffteks</h1> -->
             <!-- <div class="list-group">
@@ -22,7 +21,7 @@
             {% include "blog/footer.html" %}
         </div>
         <!-- /.col-lg-3 -->
-        <div class="col-lg-9">
+        <div class="col-lg-8">
             <div class="card mt-4">
                 <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{% else %}http://placehold.it/700x400{% endif %}" alt="product image">
                 <div class="card-body">
