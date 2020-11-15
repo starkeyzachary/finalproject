@@ -185,7 +185,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CART_SESSION_ID = 'cart'
 
 # braintree
-BRAINTREE_MERCHANT_ID = os.getenv('BRAINTREE_MERCHANT_ID')     # Merchant ID
+BRAINTREE_MERCHANT_ID = os.getenv('BRAINTREE_MERCHANT_ID');     # Merchant ID
 BRAINTREE_PUBLIC_KEY = os.getenv('BRAINTREE_PUBLIC_KEY')        # Public Key
 BRAINTREE_PRIVATE_KEY = os.getenv('BRAINTREE_PRIVATE_KEY')      # Private key
 BRAINTREE_CONF = braintree.Configuration(
