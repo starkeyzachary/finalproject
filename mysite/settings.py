@@ -30,11 +30,11 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['eattraveldogs.com', 'www.eattraveldogs.com', 'localhost', '127.0.0.1']
-if settings.DEBUG:
-    ALLOWED_HOSTS = ['*']
-else:
-    ALLOWED_HOSTS = ['eattraveldogs.com', 'www.eattraveldogs.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['eattraveldogs.com', 'www.eattraveldogs.com', 'localhost', '127.0.0.1']
+# if settings.DEBUG:
+#     ALLOWED_HOSTS = ['*']
+# else:
+#     ALLOWED_HOSTS = ['eattraveldogs.com', 'www.eattraveldogs.com', 'localhost', '127.0.0.1']
 
 SITE_ID = 1
 
