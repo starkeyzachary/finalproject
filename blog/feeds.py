@@ -5,7 +5,7 @@ from .models import Post
 
 
 class LatestPostsFeed(Feed):
-    title = 'EatTravelDogs'
+    title = 'My blog'
     link = reverse_lazy('blog:post_list')
     description = 'New posts of my blog.'
 
