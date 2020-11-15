@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
 
   <meta charset="utf-8">
@@ -9,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Clean Blog - Start Bootstrap Theme</title>
+  <title>{% block title %}{% endblock %}</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -30,14 +31,14 @@
   {% include "blog/navigation.html" %}
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('static/img/about.jpg')">
+<header class="masthead" style="background-image: url('static/img/home.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>About Us</h1>
-            <!-- <span class="subheading">This is what I do.</span> -->
+          <div class="site-heading">
+            <h1>About</h1>
+            <!-- <span class="subheading">A place for adventure...and learning how to live with 7 dogs!</span> -->
           </div>
         </div>
       </div>
