@@ -28,10 +28,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = ['eattraveldogs.com', 'www.eattraveldogs.com', 'localhost', '127.0.0.1']
-ALLOWED_HOSTS = ['*']
+if settings.DEBUG:
+    ALLOWED_HOSTS = ['*']
+else:
+    ALLOWED_HOSTS = ['buffteks.net', 'www.buffteks.net', 'localhost', '127.0.0.1']
 
 SITE_ID = 1
 
