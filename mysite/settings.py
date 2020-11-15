@@ -8,7 +8,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from os import environ
+from django.conf import settings
+# from os import environ
 from django.urls import reverse_lazy
 from pathlib import Path
 
