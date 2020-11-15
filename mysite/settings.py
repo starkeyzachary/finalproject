@@ -34,7 +34,7 @@ DEBUG = True
 if settings.DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['buffteks.net', 'www.buffteks.net', 'localhost', '127.0.0.1']
+    ALLOWED_HOSTS = ['eattraveldogs.com', 'www.eattraveldogs.com', 'localhost', '127.0.0.1']
 
 SITE_ID = 1
 
