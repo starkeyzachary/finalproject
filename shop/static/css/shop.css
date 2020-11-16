@@ -7,7 +7,7 @@
  
 /* Flexbox Sticky Footer: https://startbootstrap.com/snippets/sticky-footer-flexbox */
 /* Sticky Footer Classes */
-/* html,
+html,
 body {
     height: 100%;
 }
@@ -22,11 +22,11 @@ body {
 
 #sticky-footer {
     flex-shrink: none;
-} */
+}
 
 /* Other Classes for Page Styling */
-/* .order-form {
-    float:left;
+.order-form {
+  float:left;
 }
 
 .order-info {
@@ -55,7 +55,7 @@ body {
 
 .order-info span {
     float:right;
-} */
+}
 
 
 /* braintree hosted fields */
