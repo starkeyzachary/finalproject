@@ -57,6 +57,7 @@ body {
     float:right;
 } */
 
+
 /* braintree hosted fields */
 form div.field {
     font-size:13px;
@@ -66,7 +67,7 @@ form div.field {
     margin-bottom:10px;
     padding:3px 6px;
     border:0;
-    background:#efefef;
+    background:#666;
     color:#666;
     border-radius:4px;
 }
