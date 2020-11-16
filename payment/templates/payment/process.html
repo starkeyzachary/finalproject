@@ -2,8 +2,6 @@
 {% block title %}Pay by credit card{% endblock %}
 {% block content %}
 
-<div class="container">
-    <div class="col-lg-6">
         <h1 class="my-4">Pay by Credit Card
         </h1>
         <form id="payment" method="post">
@@ -17,8 +15,7 @@
             {% csrf_token %}
             <input type="submit" value="Pay">
         </form>
-    </div>
-</div>
+
     <!-- includes the Braintree JS client SDK -->
     <script src="https://js.braintreegateway.com/web/3.44.2/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.44.2/js/hosted-fields.min.js"></script>
