@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',    
     'shop.apps.ShopConfig',
-    'blog.apps.AccountConfig',
+    'account.apps.AccountConfig',
     # 'coupons.apps.CouponsConfig',
     'crispy_forms',
     'taggit',
