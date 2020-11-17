@@ -1,16 +1,4 @@
-{% extends "base.html" %}
-{% block title %}Log-in{% endblock %}
-{% block content %}
-  <h1>Log-in</h1>
-  <p>Please, use the following form to log-in:</p>
-  <form method="post">
-    {{ form.as_p }}
-    {% csrf_token %}
-    <p><input type="submit" value="Log in"></p>
-  </form>
-{% endblock %}
-
-<!-- {% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,26 +8,10 @@
 <body>
   <div id="header">
     <span class="logo">Bookmarks</span>
-    {% if request.user.is_authenticated %}
-      <ul class="menu">
-        <li {% if section == "dashboard" %}class="selected"{% endif %}>
-          <a href="{% url "dashboard" %}">My dashboard</a>
-        </li>
-        <li {% if section == "images" %}class="selected"{% endif %}>
-          <a href="#">Images</a>
-        </li>
-        <li {% if section == "people" %}class="selected"{% endif %}>
-          <a href="#">People</a>
-        </li>
-      </ul>
-    {% endif %}
-
-    <span class="user">
-      {% if request.user.is_authenticated %}
-        Hello {{ request.user.first_name }},
-        <a href="{% url "logout" %}">Logout</a>
-      {% else %}
-        <a href="{% url "login" %}">Log-in</a>
-      {% endif %}
-    </span>
-  </div> -->
+  </div>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>
