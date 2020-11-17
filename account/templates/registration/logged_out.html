@@ -3,7 +3,9 @@
 {% block title %}Logged out{% endblock %}
 
 {% block content %}
-  <h1>Logged out</h1>
+<div class="row">
+  <div class="col-lg-6">
+    <h1 class="my-5">Logged out</h1>
   <p>
     You have been successfully logged out.
     You can <a href="{% url "login" %}">log-in again</a>.
