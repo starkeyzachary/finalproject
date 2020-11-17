@@ -13,7 +13,10 @@
           {{ form.as_p }}
           {% csrf_token %}
           <p><input type="submit" value="Log in"></p>
-            <a href="/account/register" class="btn btn-primary">Become A Member &rarr;</a>
+          <form action="/account/register" method="post"></form>
+            <input class="btn btn-primary" type="submit" value="Become A Member">
+          </form>
+            <!-- <a href="/account/register" class="btn btn-primary">Become A Member &rarr;</a> -->
         </form>
 {% endblock %}
 
