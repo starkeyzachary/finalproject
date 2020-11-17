@@ -8,7 +8,7 @@ from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.contrib.postgres.search import TrigramSimilarity
 from .models import Post, Comment
 from .forms import EmailPostForm, CommentForm, SearchForm
-from taggit.models import 
+from taggit.models import Tag
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm
