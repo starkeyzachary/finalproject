@@ -43,6 +43,7 @@ SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
+    'account.apps.AccountConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +56,6 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',    
     'shop.apps.ShopConfig',
-    'account.apps.AccountConfig',
     # 'coupons.apps.CouponsConfig',
     'crispy_forms',
     'taggit',
