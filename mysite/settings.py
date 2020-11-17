@@ -197,3 +197,8 @@ BRAINTREE_CONF = braintree.Configuration(
     BRAINTREE_PUBLIC_KEY,
     BRAINTREE_PRIVATE_KEY
 )
+
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
