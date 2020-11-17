@@ -140,7 +140,7 @@ body {
       color: #212529;
     }
     #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(155, 153, 153, 0.8);
     }
   }
   
