@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col-lg-8">
       <h1 class="my-5">Log-in</h1>
-        <p>Please, use the following FROM form to log-in:</p>
+        <p>Please, use the following form to log-in:</p>
         <form method="post">
           {{ form.as_p }}
           {% csrf_token %}
@@ -20,4 +20,6 @@
       <p>Please, use the following form to log-in:</p>
       <a href="/account/register" class="btn btn-primary">Become A Member &rarr;</a>
 {% endblock %}
+
+<a href="/account/register" class="btn btn-primary">Become A Member &rarr;</a>
 
