@@ -133,7 +133,7 @@ body {
       color: #212529;
     }
     #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgb(156, 151, 151);
     }
     #mainNav .navbar-nav > li.nav-item > a {
       padding: 10px 20px;
@@ -164,19 +164,20 @@ body {
       color: #212529;
     }
     #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
-      color: rgba(255, 255, 255, 0.8);;
+      color: rgba(163, 156, 156, 0.8);;
     }
     #mainNav.is-fixed .navbar-nav > li.nav-item > a {
       color: #212529;
     }
     #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-      color: rgba(255, 255, 255, 0.8);;
+      color: rgba(179, 176, 176, 0.8);;
     }
     #mainNav.is-visible {
       /* if the user changes the scrolling direction, we show the header */
       transform: translate3d(0, 100%, 0);
     }
   }
+  
   
   header.masthead {
     margin-bottom: 50px;
