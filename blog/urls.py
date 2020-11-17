@@ -1,4 +1,4 @@
-from django.urls import path,  include
+from django.urls import path
 from . import views
 from .feeds import LatestPostsFeed
 
@@ -7,7 +7,7 @@ app_name = 'blog'
 urlpatterns = [
     # post views
     path('', views.post_list, name='post_list'),
-    path('account/', include('account.urls'))
+    # path('account/', include('account.urls'))
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='conact'),
     path('tag/<slug:tag_slug>/', views.post_list, name='post_list_by_tag'),
