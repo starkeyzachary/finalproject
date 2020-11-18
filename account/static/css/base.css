@@ -3,11 +3,81 @@
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-item/blob/master/LICENSE)
  */
-
  
 /* Flexbox Sticky Footer: https://startbootstrap.com/snippets/sticky-footer-flexbox */
 /* Sticky Footer Classes */
 html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 56px;
+}
+
+#page-content {
+    flex: 1 0 auto;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
+/* Other Classes for Page Styling */
+.order-form {
+  float:left;
+}
+
+.order-info {
+    float:right;
+    width:300px;
+    background:#efefef;
+    padding:10px 20px;
+    color:#333;
+    border-bottom:4px solid #5993bb;
+}
+
+.order-info h3 {
+    color:#5993bb;
+}
+
+.order-info ul li {
+    margin:0;
+    padding:0;
+    font-size:14px;
+}
+
+.order-info p {
+    font-weight:bold;
+    float:right;
+}
+
+.order-info span {
+    float:right;
+}
+
+
+/* braintree hosted fields */
+form div.field {
+    font-size:13px;
+    color:#666;
+    width:50px;
+    height:22px;
+    margin-bottom:10px;
+    padding:1px 3px;
+    border:0;
+    background:#666;
+    color:#666;
+    border-radius:2px;
+}
+
+
+/* body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+} */
+
+
 body {
     padding-top: 56px;
     font-size: 20px;
@@ -33,10 +103,6 @@ body {
     font-weight: 800;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
-  
-  .container {
-    padding: 15px;
- }
   
   a {
     color: #212529;
@@ -133,14 +199,14 @@ body {
       color: #212529;
     }
     #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: rgb(156, 151, 151);
+      color: rgba(255, 255, 255, 0.8);
     }
     #mainNav .navbar-nav > li.nav-item > a {
       padding: 10px 20px;
       color: #212529;
     }
     #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
-      color: rgba(155, 153, 153, 0.8);
+      color: rgba(255, 255, 255, 0.8);
     }
   }
   
@@ -164,20 +230,19 @@ body {
       color: #212529;
     }
     #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
-      color: rgba(163, 156, 156, 0.8);;
+      color: rgba(255, 255, 255, 0.8);;
     }
     #mainNav.is-fixed .navbar-nav > li.nav-item > a {
       color: #212529;
     }
     #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-      color: rgba(179, 176, 176, 0.8);;
+      color: rgba(255, 255, 255, 0.8);;
     }
     #mainNav.is-visible {
       /* if the user changes the scrolling direction, we show the header */
       transform: translate3d(0, 100%, 0);
     }
   }
-  
   
   header.masthead {
     margin-bottom: 50px;
