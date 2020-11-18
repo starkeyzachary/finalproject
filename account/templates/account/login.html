@@ -7,8 +7,14 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8">
-      <h1 class="my-5">Log-in</h1>
-          <p>Please, use the following form to log-in:</p>
+      <div class="card mb-4 my-5">
+        <div class="card-body">
+          <p class="card-header text-muted" >
+            <h1 class="my-2"></h1>Log-in</h1>
+          </p>
+          <p class="card-text">
+            <p>Please, use the following form to log-in:</p>
+          </p>
           <form method="post">
             {{ form.as_p }}
             {% csrf_token %}
