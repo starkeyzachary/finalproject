@@ -1,16 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Log-in{% endblock %}
 {% block content %}
+
 <div class="row">
-  <!-- <div class="col-lg-6">
-    <div class="card mt-4 my-5"> -->
-  <div class="col-lg-6 col-md-6 mb-4 my-4">
-    <div class="card h-100">
+  <div class="col-lg-6">
+    <div class="card mb-4 my-5">
       <div class="card-body">
-        <p class="card-header text-muted" >
+        <p class="card-header text-muted"
           <h3>Log-in</h3>
           {% if form.errors %}
-          <p class="card-text">
         <p>
           Your username and password didn't match.
           Please try again.
@@ -28,6 +26,7 @@
           </form>
           <p><a href="{% url "password_reset" %}">Forgotten your password?</a></p>
         </div>
+      </div>
 {% endblock %}
 
 
