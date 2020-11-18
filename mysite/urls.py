@@ -30,6 +30,7 @@ sitemaps = {
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
+    path('social-auth/', include('social_django.urls', namespace='social')),
     path('cart/', include('cart.urls', namespace='cart')),
     path('payment/', include('payment.urls', namespace='payment')),
     path('orders/', include('orders.urls', namespace='orders')),    
