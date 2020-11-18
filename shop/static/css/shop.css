@@ -61,14 +61,14 @@ body {
 /* braintree hosted fields */
 form div.field {
     font-size:13px;
-    color:rgb(158, 157, 157);
+    color:rgb(177, 176, 176);
     width:50px;
     height:22px;
     margin-bottom:10px;
     padding:1px 3px;
     border:0;
-    background:rgb(179, 179, 179);
-    color:rgb(180, 180, 180);
+    background:rgb(199, 199, 199);
+    color:rgb(194, 191, 191);
     border-radius:2px;
 }
 
