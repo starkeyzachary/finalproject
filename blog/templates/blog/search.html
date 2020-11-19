@@ -1,4 +1,4 @@
-{% extends "blog/index.html" %}
+<!-- {% extends "blog/index.html" %} -->
 {% load blog_tags %}
 {% load crispy_forms_tags %}    
 {% block title %}Search{% endblock %}
@@ -20,10 +20,7 @@
 
 {% block content %}
 
-  <!-- Page Header -->
-
-
-<!-- Search Column -->
+ <!-- Search Column -->
 <div class="col-md-8">
     {% if query %}
         <h1>Posts containing "{{ query }}"</h1>
