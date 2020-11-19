@@ -63,7 +63,8 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.postgres',
     'social_django',
-    # 'images.apps.ImagesConfig',
+    'images.apps.ImagesConfig',
+    'easy_thumbnails',
     # 'rosetta',
     # 'parler',
     # 'localflavor'
