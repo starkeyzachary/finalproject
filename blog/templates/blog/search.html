@@ -1,6 +1,12 @@
+<!-- {% extends "blog/index.html" %} -->
 {% load static %}
+{% load blog_tags %}
+{% load crispy_forms_tags %}    
+{% block title %}Search{% endblock %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
 
@@ -9,7 +15,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Search</title>
+  <title>EatTravelDogs</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -25,33 +31,52 @@
 </head>
 
 <body>
- <!-- Search Column -->
- <div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            {% if query %}
-                <h1>Posts containing "{{ query }}"</h1>
-                <h3>
-                    {% with results.count as total_results %}
-                        Found {{ total_results }} result{{ total_results|pluralize }}
-                    {% endwith %}
-                </h3>
-                {% for post in results %}
-                    <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
-                    {{ post.body|markdown|truncatewords_html:5 }}
-                    {% empty %}
-                    <p>There are no results for your query.</p>
-                {% endfor %}
-                <a href="{% url 'blog:post_search' %}" class="btn btn-primary">Search Again &rarr;</a>
-                <!-- {% comment %} <p><a href="{% url 'blog:post_search' %}">Search again</a></p> {% endcomment %} -->
-            {% else %}
-                <h1>Search for posts</h1>
-                <div class="input-group">
-                    <form method="get">
-                        {{ form|crispy }}
-                        <input type="submit" value="Search">
-                    </form>                
-                </div>            
-            {% endif %}        
+
+  <!-- Navigation -->
+  {% include "blog/navigation.html" %}
+
+  <!-- Page Header -->
+<header class="masthead" style="background-image: url('static/img/home.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Eat Travel Dogs</h1>
+            <span class="subheading">A place for adventure...and learning how to live with 7 dogs!</span>
+          </div>
         </div>
+      </div>
+    </div>
+  </header>
+
+
+
+ <!-- Search Column -->
+<div class="col-md-8">
+    {% if query %}
+        <h1>Posts containing "{{ query }}"</h1>
+        <h3>
+            {% with results.count as total_results %}
+                Found {{ total_results }} result{{ total_results|pluralize }}
+            {% endwith %}
+        </h3>
+        {% for post in results %}
+            <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+            {{ post.body|markdown|truncatewords_html:5 }}
+            {% empty %}
+            <p>There are no results for your query.</p>
+        {% endfor %}
+        <a href="{% url 'blog:post_search' %}" class="btn btn-primary">Search Again &rarr;</a>
+        <!-- {% comment %} <p><a href="{% url 'blog:post_search' %}">Search again</a></p> {% endcomment %} -->
+    {% else %}
+        <h1>Search for posts</h1>
+        <div class="input-group">
+            <form method="get">
+                {{ form|crispy }}
+                <input type="submit" value="Search">
+            </form>                
+        </div>            
+    {% endif %}        
+</div>
 
