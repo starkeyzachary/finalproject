@@ -32,8 +32,9 @@
   <!-- Navigation -->
   {% include "blog/navigation.html" %}
 
+
   <!-- Page Header -->
-<header class="masthead" style= "background-image: url('{{ STATIC_URL }}static/img/home.jpg')">
+<header class="masthead" style= background-image: url('{% static 'static/img/home.jpg' %}');>
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
