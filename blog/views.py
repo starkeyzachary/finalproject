@@ -128,7 +128,7 @@ def post_search(request):
             #     similarity=TrigramSimilarity('title', query),
             # ).filter(similarity__gt=0.1).order_by('-similarity')
     return render(request,
-                  'blog/post/search.html',
+                  'blog/search.html',
                   {'form': form,
                    'query': query,
                    'results': results})
