@@ -427,6 +427,6 @@ form div.field {
   border-radius:4px;
 }
 
-about {
+.about {
 	background: url('/static/img/about.jpg');
 }
