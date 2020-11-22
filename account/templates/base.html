@@ -41,8 +41,8 @@
           <li class="nav-item"> 
             <a class="nav-link" {% if section == "images" %}class="selected"{% endif %} href="{% url "images:list" %}">Images</a>
           </li>
-          <li class="nav-item" {% if section == "people" %}class="selected"{% endif %}>
-            <a href="{% url "user_list" %}">People</a>
+          <li class="nav-item"> 
+            <a class="nav-link" {% if section == "people" %}class="selected"{% endif %} href="{% url "user_list" %}">People</a>
           </li>
         </ul>
       {% endif %}
