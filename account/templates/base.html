@@ -50,13 +50,9 @@
       <span class="user">
         {% if request.user.is_authenticated %}
           Hello {{ request.user.first_name }},
-          <li class="nav-item">
-            <a class="nav-link" href="{% url "logout" %}">Logout</a>
-          </li>
+          <a class="nav-link" href="{% url "logout" %}">Logout</a>
         {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url "login" %}">Log-in</a>
-          </li>
+          <a class="nav-link" href="{% url "login" %}">Log-in</a>
         {% endif %}
       </span>
       </div>
