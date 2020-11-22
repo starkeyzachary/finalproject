@@ -38,7 +38,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url "dashboard" %}">Dashboard</a>
           </li>
-          <li class="nav-item" 
+          <li class="nav-item"> 
             <a class="nav-link" {% if section == "images" %}class="selected"{% endif %} href="{% url "images:list" %}">Images</a>
           </li>
           <li class="nav-item" {% if section == "people" %}class="selected"{% endif %}>
